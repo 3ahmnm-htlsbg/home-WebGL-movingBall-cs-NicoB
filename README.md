@@ -15,9 +15,11 @@ If you press the button the ball will change it's position always (V2) in one ou
 WebGL 960x600 
 
 ### Visuals: 
+#Game Start
 <div>
 <img src="Screenshots/Start.JPG">
 </div>
+#Button pressed
 <div>
 <img src="Screenshots/ButtonPressed.JPG">
 </div>
