@@ -11,16 +11,27 @@ public class moveBall : MonoBehaviour
 	int randomInt;
 	int randomIntBefore;
 
-	public void SetBallPos()
+	void Start()
 	{
-		randomInt = Random.Range(0 ,4);
+		randomInt = 0;
+		//if it would be null, it wouldnt be possible to start at position[0]
+		randomIntBefore = 5;
+	}
+	public void GetRandomInt()
+	{
+		randomInt = Random.Range(0,4);
 		if (randomInt != randomIntBefore)
 		{
 			randomIntBefore = randomInt;
-			BallGO.transform.position = ballPositions[randomInt].transform.position;
+			SetPosition();
 		} else 
 		{
-			SetBallPos();
+			GetRandomInt();
 		}
+	}
+
+	void SetPosition()
+	{
+		BallGO.transform.position = ballPositions[randomInt].transform.position;
 	}
 }
